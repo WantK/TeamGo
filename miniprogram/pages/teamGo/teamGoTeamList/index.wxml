@@ -1,0 +1,15 @@
+<!--miniprogram/pages/teamGo/teamGoTeam/index.wxml-->
+<view>
+  <i-card title="组队" extra="简介" thumb="cloud://xly-367a94.786c-xly-367a94-1300268508/my-image.jpg">
+    <view slot="content">发起人</view>
+    <view slot="footer">地点</view>
+  </i-card>
+  <i-card title="组队" extra="简介" thumb="cloud://xly-367a94.786c-xly-367a94-1300268508/my-image.jpg">
+    <view slot="content">发起人</view>
+    <view slot="footer">地点</view>
+  </i-card>
+  <i-card title="组队" extra="简介" thumb="cloud://xly-367a94.786c-xly-367a94-1300268508/my-image.jpg">
+    <view slot="content">发起人</view>
+    <view slot="footer">地点</view>
+  </i-card>
+</view>

@@ -1,0 +1,32 @@
+<!--miniprogram/pages/teamGo/teamGoIndex/index.wxml-->
+<view>
+  <i-tab-bar fixed="true" current="{{ current }}" color="#f759ab" bindchange="handleChange">
+    <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="组队信息"></i-tab-bar-item>
+    <i-tab-bar-item key="add" icon="add" current-icon="add" title="发起组队"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+  </i-tab-bar>
+</view>
+
+<view>
+  <!-- <textarea bindinput="onNameChange" auto-height="true" value="{{name}}"></textarea> -->
+  <i-input bind:change="onNameChange" value="{{ name }}" type="textarea" title="姓名：" autofocus placeholder="名字" />
+  <i-input bind:change="onMajorChange" value="{{ major }}" type="textarea" title="专业方向：" autofocus placeholder="专业方向" />
+  <i-input bind:change="onHobbyChange" value="{{ hobby }}" type="textarea" title="爱好：" autofocus placeholder="爱好" />
+  <i-input bind:change="onPhoneChange" value="{{ phone }}" type="textarea" title="联系方式：" autofocus placeholder="联系方式" />
+  <i-input bind:change="onUniversityChange" value="{{ university }}" type="textarea" title="学校：" autofocus placeholder="学校" />
+  <i-input bind:change="onGenderChange" value="{{ gender }}" type="textarea" title="性别：" autofocus placeholder="性别" />
+  <!-- <button bindtap="onSubmit">提交</button> -->
+  <i-button bind:click="onSubmit" type="primary" shape="square" size="small">提交</i-button>
+</view>
+<!-- <view>
+  <button bindtap="onQuery">查询</button>
+  <text wx:if="{{queryResult}}">{{queryResult}}</text>
+</view>
+<view>
+  <button bindtap="onUpdate">修改</button>
+  <input type="text" bindinput="onIdUpdate" value="{{updateInput}}"></input>
+</view>
+<view>
+  <button bindtap="onRemove">删除</button>
+  <input type="text" bindinput="onIdRemove" value="{{removeInput}}"></input>
+</view> -->
