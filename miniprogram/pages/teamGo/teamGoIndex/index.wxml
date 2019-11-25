@@ -1,11 +1,6 @@
 <!--miniprogram/pages/teamGo/teamGoIndex/index.wxml-->
-<view>
-  <i-tab-bar fixed="true" current="{{ current }}" color="#f759ab" bindchange="handleChange">
-    <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="组队信息"></i-tab-bar-item>
-    <i-tab-bar-item key="add" icon="add" current-icon="add" title="发起组队"></i-tab-bar-item>
-    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
-  </i-tab-bar>
-</view>
+<import src="../tab-bar/tab-bar.wxml"/>
+<template is="tab-bar"></template>
 
 <view>
   <!-- <textarea bindinput="onNameChange" auto-height="true" value="{{name}}"></textarea> -->

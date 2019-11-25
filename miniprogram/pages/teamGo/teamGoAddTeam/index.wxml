@@ -1,2 +1,4 @@
 <!--miniprogram/pages/teamGo/teamGoAddTeam/index.wxml-->
+<import src="../tab-bar/tab-bar.wxml"/>
+<template is="tab-bar"></template>
 <text>miniprogram/pages/teamGo/teamGoAddTeam/index.wxml</text>

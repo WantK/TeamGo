@@ -15,7 +15,9 @@
     "pages/im/im",
     "pages/im/room/room",
     "pages/teamGo/teamGoAddTeam/index",
-    "pages/teamGo/teamGoTeamList/index"
+    "pages/teamGo/teamGoTeamList/index",
+    "pages/teamGo/tab-bar/tab-bar"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -25,5 +27,11 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+
+  "usingComponents": {
+    "i-tab-bar": "pages/teamGo/dist/tab-bar/index",
+    "i-tab-bar-item": "pages/teamGo/dist/tab-bar-item/index",
+    "i-icon": "pages/teamGo/dist/icon/index"
+  }
 }
