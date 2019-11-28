@@ -13,7 +13,7 @@ Page({
   onLoad: function() {
     if (!wx.cloud) {
       wx.redirectTo({
-        url: '../chooseLib/chooseLib',
+        url: '../teamGo/teamGoIndex',
       })
       return
     }
@@ -57,16 +57,19 @@ Page({
         // wx.navigateTo({
         //   url: '../userConsole/userConsole',
         // })
+<<<<<<< HEAD
         wx.redirectTo({
           url: '../teamGo/teamGoTeamList/index',
         })
         
+=======
+>>>>>>> master
       },
       fail: err => {
         console.error('[云函数] [login] 调用失败', err)
-        wx.navigateTo({
-          url: '../deployFunctions/deployFunctions',
-        })
+        // wx.navigateTo({
+        //   url: '../deployFunctions/deployFunctions',
+        // })
       }
     })
   },

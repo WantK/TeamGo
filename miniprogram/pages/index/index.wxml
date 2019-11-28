@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
 
-  <!-- 用户 openid -->
+  <!-- 用户 -->
   <view class="userinfo">
     <button 
       open-type="getUserInfo" 
@@ -11,9 +11,11 @@
       size="default"
     ></button>
     <view class="userinfo-nickname-wrapper">
-      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+      <!-- <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button> -->
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </view>
   </view>
+<<<<<<< HEAD
 
 
   <!-- 上传图片 -->
@@ -56,4 +58,6 @@
   </view> -->
 
 
+=======
+>>>>>>> master
 </view>
