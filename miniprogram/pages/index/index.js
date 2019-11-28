@@ -58,10 +58,13 @@ Page({
         //   url: '../userConsole/userConsole',
         // })
 <<<<<<< HEAD
+<<<<<<< HEAD
         wx.redirectTo({
           url: '../teamGo/teamGoTeamList/index',
         })
         
+=======
+>>>>>>> master
 =======
 >>>>>>> master
       },
