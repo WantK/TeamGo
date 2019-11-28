@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    
   },
 
   /**
@@ -62,5 +62,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  handleChange(e) {
+    switch (e.detail) {
+      case 'group': wx.navigateTo({
+        url: '../teamGoTeamList/index'
+      })
+      case 'add': wx.navigateTo({
+        url: '../teamGoAddTeam/index'
+      })
+      case 'mine': wx.navigateTo({
+        url: '../teamGoIndex/index'
+      })
+      default:
+    }
   }
 })

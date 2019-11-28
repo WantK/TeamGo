@@ -1,18 +1,106 @@
 <!--miniprogram/pages/teamGo/teamGoIndex/index.wxml-->
-<import src="../tab-bar/tab-bar.wxml"/>
-<template is="tab-bar"></template>
+<import src="../tab-bar-vant/tab-bar.wxml"/>
+<template is="tab-bar-vant"></template>
 
 <view>
-  <!-- <textarea bindinput="onNameChange" auto-height="true" value="{{name}}"></textarea> -->
-  <i-input bind:change="onNameChange" value="{{ name }}" type="textarea" title="姓名：" autofocus placeholder="名字" />
-  <i-input bind:change="onMajorChange" value="{{ major }}" type="textarea" title="专业方向：" autofocus placeholder="专业方向" />
-  <i-input bind:change="onHobbyChange" value="{{ hobby }}" type="textarea" title="爱好：" autofocus placeholder="爱好" />
-  <i-input bind:change="onPhoneChange" value="{{ phone }}" type="textarea" title="联系方式：" autofocus placeholder="联系方式" />
-  <i-input bind:change="onUniversityChange" value="{{ university }}" type="textarea" title="学校：" autofocus placeholder="学校" />
-  <i-input bind:change="onGenderChange" value="{{ gender }}" type="textarea" title="性别：" autofocus placeholder="性别" />
-  <!-- <button bindtap="onSubmit">提交</button> -->
-  <i-button bind:click="onSubmit" type="primary" shape="square" size="small">提交</i-button>
+  <van-cell-group>
+    <van-field
+      value="{{ name }}"
+      required
+      clearable
+      label="姓名"
+      placeholder="姓名"
+      bind:change="onNameChange"
+    />
+  </van-cell-group>
+  <van-cell-group>
+    <van-field
+      value="{{ major }}"
+      required
+      clearable
+      label="专业方向"
+      placeholder="专业方向"
+      bind:change="onMajorChange"
+    />
+  </van-cell-group>
+  <van-cell-group>
+    <van-field
+      value="{{ hobby }}"
+      required
+      clearable
+      label="爱好"
+      placeholder="爱好"
+      bind:change="onHobbyChange"
+    />
+  </van-cell-group>
+  <van-cell-group>
+    <van-field
+      value="{{ phone }}"
+      type="number"
+      required
+      clearable
+      label="联系方式"
+      placeholder="联系方式"
+      bind:change="onPhoneChange"
+    />
+  </van-cell-group>
+  <van-cell-group>
+    <van-field
+      value="{{ university }}"
+      required
+      clearable
+      label="学校"
+      placeholder="学校"
+      bind:change="onUniversityChange"
+    />
+  </van-cell-group>
+  <van-cell-group>
+    <van-field
+      value="{{ gender }}"
+      required
+      clearable
+      label="性别"
+      placeholder="性别"
+      bind:change="onGenderChange"
+    />
+  </van-cell-group>
+  <!-- <van-cell-group>
+    <button bindtap="onSubmit">提交</button>
+  </van-cell-group> -->
+  <van-row gutter="20">
+    <van-col span="8" offset="4">
+      <button bindtap="onSubmit">提交</button>
+    </van-col>
+    <!-- <van-col span="2">
+      <van-button type="info" bindtap="onSubmit">提交</van-button>
+    </van-col> -->
+  </van-row>
+  <!-- <van-cell-group>
+    <button bindtap="onQuery">查询</button>
+    <text wx:if="{{queryResult}}">{{queryResult}}</text>
+  </van-cell-group>
+  <van-cell-group>
+    <button bindtap="onUpdate">修改</button>
+    <input type="text" bindinput="onIdUpdate" value="{{updateInput}}"></input>
+  </van-cell-group>
+  <van-cell-group>
+    <button bindtap="onRemove">删除</button>
+    <input type="text" bindinput="onIdRemove" value="{{removeInput}}"></input>
+  </van-cell-group> -->
 </view>
+  
+<!-- </view>
+  <van-cell title="性别" size="20px" required>
+    <label>男</label>
+    <van-switch 
+      size="20px"
+      checked="{{ checked }}"
+      active-color="#07c160"
+      inactive-color="#ee0a24" 
+      bind:change="onGenderChange" />
+  </van-cell>
+
+</view> -->
 <!-- <view>
   <button bindtap="onQuery">查询</button>
   <text wx:if="{{queryResult}}">{{queryResult}}</text>

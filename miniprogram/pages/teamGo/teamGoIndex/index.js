@@ -1,4 +1,5 @@
 // miniprogram/pages/teamGo/teamGoIndex/index.js
+import Toast from '../dist-vant/toast/toast';
 Page({
 
   /**
@@ -63,35 +64,35 @@ Page({
   },
 
   onNameChange: function(e) {
-    // console.log("onNameChange e.detail.value:",e.detail.detail.value)
+    // console.log("onNameChange e.detail.value:",e.detail)
     this.setData({
-      name: e.detail.detail.value
+      name: e.detail
     })
     // console.log("onNameChange this.data.name:",this.data.name)
   },
   onMajorChange: function (e) {
     this.setData({
-      major: e.detail.detail.value
+      major: e.detail
     })
   },
   onHobbyChange: function (e) {
     this.setData({
-      hobby: e.detail.detail.value
+      hobby: e.detail
     })
   },
   onPhoneChange: function (e) {
     this.setData({
-      phone: e.detail.detail.value
+      phone: e.detail
     })
   },
   onUniversityChange: function (e) {
     this.setData({
-      university: e.detail.detail.value
+      university: e.detail
     })
   },
-  onGenderChange: function (e) {
+  onGenderChange(e) {
     this.setData({
-      gender: e.detail.detail.value
+      gender: e.detail
     })
   },
 
@@ -139,8 +140,7 @@ Page({
     const db = wx.cloud.database()
     // 查询当前用户所有的 counters
     db.collection('userInfo').where({
-      _openid: this.data.openid,
-      name: "张晋彬"
+      _openid: this.data.openid
     }).get({
       success: res => {
         this.setData({
@@ -218,8 +218,8 @@ Page({
     // console.log("onNameChange this.data.changeId:",this.data.changeId)
   },
   // 导航栏响应事件
-  handleChange({ detail }) {
-    switch(detail.key){
+  handleChange(e) {
+    switch(e.detail){
       case 'group': wx.navigateTo({
         url: '../teamGoTeamList/index'
       })
@@ -227,7 +227,7 @@ Page({
         url: '../teamGoAddTeam/index'
       })
       case 'mine': wx.navigateTo({
-        url: '../teamGoTeamList/index'
+        url: '../teamGoIndex/index'
       })
       default:
     }

@@ -1,0 +1,10 @@
+<!--miniprogram/pages/teamGo/tab-bar2/tab-bar.wxml-->
+<template name="tab-bar-vant">
+<van-tabbar active-color="#07c160" inactive-color="#000" active="{{ active }}" bind:change="handleChange">
+  <van-tabbar-item name="group" icon="friends-o">组队信息</van-tabbar-item>
+  <van-tabbar-item name="add" icon="plus">发起组队</van-tabbar-item>
+  <van-tabbar-item name="mine" icon="user-o">我的</van-tabbar-item>
+</van-tabbar>
+</template>
+
+<template is="tab-bar-vant"></template>
