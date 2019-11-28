@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/teamGo/teamGoIndex/index",
     "pages/index/index",
-    "pages/userConsole/userConsole",
     "pages/teamGo/teamGoAddTeam/index",
+    "pages/teamGo/teamGoIndex/index",
+    
+    "pages/userConsole/userConsole",
+    
     "pages/teamGo/teamGoTeamList/index",
     "pages/teamGo/tab-bar/tab-bar",
     "pages/teamGo/tab-bar-vant/tab-bar"

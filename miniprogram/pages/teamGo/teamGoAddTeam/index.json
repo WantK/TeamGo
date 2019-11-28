@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "van-button": "../dist-vant/button"
+    "van-button": "../dist-vant/button",
+    "van-field": "../dist-vant/field/index",
+    "van-datetime-picker": "../dist-vant/datetime-picker/index"
   }
 }

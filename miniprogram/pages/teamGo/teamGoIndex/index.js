@@ -1,5 +1,7 @@
 // miniprogram/pages/teamGo/teamGoIndex/index.js
 import Toast from '../dist-vant/toast/toast';
+
+var app = getApp()
 Page({
 
   /**

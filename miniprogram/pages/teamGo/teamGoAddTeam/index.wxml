@@ -1,4 +1,75 @@
 <!--miniprogram/pages/teamGo/teamGoAddTeam/index.wxml-->
 <import src="../tab-bar-vant/tab-bar.wxml"/>
 <template is="tab-bar-vant"></template>
-<van-button type="primary">按钮</van-button>
+<view>
+  <van-cell-group>
+    <van-field
+      value="{{ activity_name }}"
+      required
+      clearable
+      label= "组队名称"
+      placeholder="组队名称"
+      bind:change="onActivityNameChange"
+    />
+  </van-cell-group>
+  <van-cell-group>
+    <van-field
+      value="{{ type }}"
+      required
+      clearable
+      label="组队类型"
+      placeholder="组队类型"
+      bind:change="onTypeChange"
+    />
+  </van-cell-group>
+  <van-cell-group>
+    <van-field
+      value="{{ location }}"
+      required
+      clearable
+      label="地点"
+      placeholder="地点"
+      bind:change="onLocationChange"
+    />
+  </van-cell-group>
+  <van-cell-group>
+    <van-field
+      value="{{ description }}"
+      type="textarea"
+      required
+      clearable
+      label="简介"
+      placeholder="简介"
+      bind:change="onDescriptionChange"
+    />
+  </van-cell-group>
+  <van-cell-group>
+    <van-field
+      value="{{ people_number }}"
+      type="number"
+      required
+      clearable
+      label="人数"
+      placeholder="人数"
+      bind:change="onPeopleNumberChange"
+    />
+  </van-cell-group>
+  <van-cell-group>
+    <van-field
+      value="{{ end_time }}"
+      required
+      clearable
+      label="活动时间"
+      placeholder="活动时间"
+      bind:change="onEndTimeChange"
+    />
+  </van-cell-group>
+  <!-- <van-cell-group>
+    <button bindtap="onSubmit">提交</button>
+  </van-cell-group> -->
+  <van-row gutter="20">
+    <van-col span="8" offset="4">
+      <button bindtap="onSubmit">提交</button>
+    </van-col>
+  </van-row>
+</view>
