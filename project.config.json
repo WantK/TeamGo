@@ -4,10 +4,21 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"enhance": true
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true
 	},
 	"appid": "wxb93216a9843b5982",
 	"projectname": "TeamGo",

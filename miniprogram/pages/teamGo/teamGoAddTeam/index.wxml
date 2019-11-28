@@ -1,4 +1,4 @@
 <!--miniprogram/pages/teamGo/teamGoAddTeam/index.wxml-->
-<import src="../tab-bar/tab-bar.wxml"/>
-<template is="tab-bar"></template>
-<text>miniprogram/pages/teamGo/teamGoAddTeam/index.wxml</text>
+<import src="../tab-bar-vant/tab-bar.wxml"/>
+<template is="tab-bar-vant"></template>
+<van-button type="primary">按钮</van-button>
