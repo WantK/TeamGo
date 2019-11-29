@@ -22,7 +22,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log("app.globalData.openid:", app.globalData)
+    // console.log("app.globalData.openid:", app.globalData)   
     util.onGetOpenid()
     app.onQuery(app.globalData.openid)
     app.onQueryTeamList()
@@ -109,17 +109,41 @@ Page({
     })
   },
 
+  joinTeam: function(e){
+    var teamId = e.currentTarget.id
+    var team = util.findTeamById(app.globalData.teamList,teamId)
+    // var member_id_list = []
+    // for(var i =0; i < team.member_id_list.length; i++)
+    //   member_id_list.push(team.member_id_list[i])
+    var member_id_list = team.member_id_list
+    console.log(member_id_list)
+    member_id_list.push(app.globalData.userInfo._id)
+    const db = wx.cloud.database()
+    db.collection('teamInfo').doc(teamId).update({
+      data: {
+        member_id_list: member_id_list,
+        joined_number: team.joined_number+1
+      },
+      success: res => {
+        console.log(res)
+      },
+      fail: err => {
+        icon: 'none',
+          console.error('[数据库] [更新记录] 失败：', err)
+      }
+    })
+    
+  },
+
   handleChange(e) {
     switch (e.detail) {
-      case 'group': wx.navigateTo({
-        url: '../teamGoTeamList/index'
-      })
+      case 'group': this.onLoad(); break;
       case 'add': wx.navigateTo({
         url: '../teamGoAddTeam/index'
-      })
+      }); break;
       case 'mine': wx.navigateTo({
-        url: '../teamGoIndex/index'
-      })
+        url: '../teamGoMine/index'
+      }); break;
       default:
     }
   }

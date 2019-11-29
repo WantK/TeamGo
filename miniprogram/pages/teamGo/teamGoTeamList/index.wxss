@@ -1,1 +1,8 @@
 /* miniprogram/pages/teamGo/teamGoTeam/index.wxss */
+.btn1 {
+  width: 40%;
+  margin-top: 20rpx;
+  background-color: #80848f;
+  color: white;
+  border-radius: 50rpx; 
+}

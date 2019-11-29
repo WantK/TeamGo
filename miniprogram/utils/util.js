@@ -7,7 +7,14 @@ function findNameById(userList,id){
     if(userList[i]._id == id)
       return userList[i].name
   }
-  return 
+}
+
+function findTeamById(teamList,id){
+  for (var i = 0; i < teamList.length; i++) {
+    if (teamList[i]._id == id){
+      return teamList[i]
+    }
+  }
 }
 
 function link_teamList_userInfo(teamList,userList) {
@@ -42,5 +49,6 @@ function onGetOpenid() {
 //转化成小程序模板语言 这一步非常重要 不然无法正确调用
 module.exports = {
   link_teamList_userInfo: link_teamList_userInfo,
-  onGetOpenid: onGetOpenid
+  onGetOpenid: onGetOpenid,
+  findTeamById: findTeamById
 }

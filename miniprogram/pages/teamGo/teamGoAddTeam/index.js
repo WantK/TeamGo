@@ -132,13 +132,11 @@ Page({
     switch (e.detail) {
       case 'group': wx.navigateTo({
         url: '../teamGoTeamList/index'
-      })
-      case 'add': wx.navigateTo({
-        url: '../teamGoAddTeam/index'
-      })
+      }); break;
+      case 'add': this.onLoad(); break;
       case 'mine': wx.navigateTo({
-        url: '../teamGoIndex/index'
-      })
+        url: '../teamGoMine/index'
+      }); break ;
       default:
     }
   }
