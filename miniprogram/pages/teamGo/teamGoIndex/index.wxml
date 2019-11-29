@@ -2,7 +2,7 @@
 <import src="../tab-bar-vant/tab-bar.wxml"/>
 <template is="tab-bar-vant"></template>
 
-<view>
+<view style="padding:0 0 18% 0"> <!-- 上 右 下 左 -->
   <van-cell-group>
     <van-field
       value="{{ name }}"
