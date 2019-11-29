@@ -63,7 +63,6 @@ Page({
         wx.redirectTo({
           url: '../teamGo/teamGoTeamList/index',
         })
-        
       },
       fail: err => {
         console.error('[云函数] [login] 调用失败', err)

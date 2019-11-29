@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/teamGo/teamGoAddTeam/index",
+    "pages/index/index",
     "pages/teamGo/teamGoIndex/index",
     "pages/teamGo/teamGoTeamList/index",
     "pages/teamGo/tab-bar/tab-bar",
@@ -11,7 +11,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "TeamGo",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
