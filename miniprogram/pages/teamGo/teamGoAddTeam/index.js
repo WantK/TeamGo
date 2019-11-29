@@ -89,9 +89,9 @@ Page({
       people_number: e.detail
     })
   },
-  onEndTimeChange: function (e) {
+  onActivityTimeChange: function (e) {
     this.setData({
-      end_time: e.detail
+      activity_time: e.detail
     })
   },
   onSubmit: function () {
@@ -107,7 +107,7 @@ Page({
         description: this.data.description,
         people_number: this.data.people_number,
         create_time: create_time.toLocaleDateString() + "-" + create_time.toLocaleTimeString(),
-        end_time:this.data.end_time,
+        activity_time:this.data.activity_time,
         is_delete:0,
         joined_number:1
       },

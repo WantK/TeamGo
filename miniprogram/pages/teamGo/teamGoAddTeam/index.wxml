@@ -56,12 +56,12 @@
   </van-cell-group>
   <van-cell-group>
     <van-field
-      value="{{ end_time }}"
+      value="{{ activity_time }}"
       required
       clearable
       label="活动时间"
       placeholder="活动时间"
-      bind:change="onEndTimeChange"
+      bind:change="onActivityTimeChange"
     />
   </van-cell-group>
   <!-- <van-cell-group>

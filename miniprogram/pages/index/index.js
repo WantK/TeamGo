@@ -31,9 +31,9 @@ Page({
               })
             }
           })
-          wx.redirectTo({
-            url: '../teamGo/teamGoTeamList/index',
-          })
+          // wx.redirectTo({
+          //   url: '../teamGo/teamGoTeamList/index',
+          // })
         }
       }
     })

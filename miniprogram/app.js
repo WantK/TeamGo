@@ -19,13 +19,50 @@ App({
   },
   onQuery: function (openid) {
     const db = wx.cloud.database()
-    // 查询当前用户所有的 counters
     db.collection('userInfo').where({
       _openid: openid
     }).get({
       success: res => {
         this.globalData.userInfo = res.data[0]
-        console.log('[数据库] [查询记录] 成功: ', res)
+        wx.setStorageSync('userInfo', res.data[0])
+        console.log('[数据库] [查询记录] 成功: ', res.data)
+        return res.data[0]
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '查询记录失败'
+        })
+        console.error('[数据库] [查询记录] 失败：', err)
+      }
+    })
+  },
+  onQueryTeamList: function () {
+    const db = wx.cloud.database()
+    // 查询当前用户所有的 counters
+    db.collection('teamInfo').get({
+      success: res => {
+        this.globalData.teamList = res.data
+        wx.setStorageSync('teamList', res.data)
+        console.log('[数据库] [查询记录] 成功: ', res.data)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '查询记录失败'
+        })
+        console.error('[数据库] [查询记录] 失败：', err)
+      }
+    })
+  },
+  onQueryUserList: function () {
+    const db = wx.cloud.database()
+    // 查询当前用户所有的 counters
+    db.collection('userInfo').get({
+      success: res => {
+        this.globalData.userList = res.data
+        wx.setStorageSync('userList', res.data)
+        console.log('[数据库] [查询记录] 成功: ', res.data)
       },
       fail: err => {
         wx.showToast({

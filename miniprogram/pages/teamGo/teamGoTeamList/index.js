@@ -1,4 +1,6 @@
 // miniprogram/pages/teamGo/teamGoTeam/index.js
+
+var util = require('../../../utils/util.js');      //引用外部的js文件
 var app = getApp()
 Page({
 
@@ -6,16 +8,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    array:[
+      {
+        message:"f1"
+      },
+      {
+        message:"f2"
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("app.globalData.openid:", app.globalData.openid)
+    // console.log("app.globalData.openid:", app.globalData)
     app.onQuery(app.globalData.openid)
-    console.log(app.globalData)
+    app.onQueryTeamList()
+    app.onQueryUserList()
+    // console.log("app.globalData", app.globalData)
+    // console.log("wx.getStorageSync('teamList')",wx.getStorageSync('teamList') || [])
+    var teamList = wx.getStorageSync('teamList') || []
+    var userList = wx.getStorageSync('userList') || []
+    wx.setStorageSync("teamList", util.link_teamList_userInfo(teamList,userList))
+    this.setData({
+      teamList: wx.getStorageSync('teamList') || []
+    })
+    app.globalData.teamList = this.data.teamList
+    console.log("this.data:",this.data)
+    console.log("globalData:",app.globalData)
   },
 
   /**
