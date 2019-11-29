@@ -24,6 +24,7 @@ function link_teamList_userInfo(teamList,userList) {
   for(var i = 0; i < teamList.length; i++){
     teamList[i].headerName = findNameById(userList,teamList[i].header_id)
   }
+  console.log(teamList)
   return teamList
 }
 

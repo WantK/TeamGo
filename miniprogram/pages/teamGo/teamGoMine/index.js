@@ -2,6 +2,7 @@
 import Toast from '../dist-vant/toast/toast';
 
 var app = getApp()
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -14,6 +15,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.cloud.callFunction({
+      name: 'dbOperate',
+      data: {
+        "data": "hello cloud"
+      },
+      success: res => {
+        console.log(res)
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+      }
+    })
   },
 
   /**

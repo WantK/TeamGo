@@ -8,14 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array:[
-      {
-        message:"f1"
-      },
-      {
-        message:"f2"
-      }
-    ]
+    
   },
 
   /**
@@ -119,19 +112,35 @@ Page({
     console.log(member_id_list)
     member_id_list.push(app.globalData.userInfo._id)
     const db = wx.cloud.database()
-    db.collection('teamInfo').doc(teamId).update({
+    wx.cloud.callFunction({
+      name: 'dbOperate',
       data: {
-        member_id_list: member_id_list,
-        joined_number: team.joined_number+1
+        "teamId": teamId,
+        "member_id_list": member_id_list,
+        "joined_number": team.joined_number+1
       },
       success: res => {
         console.log(res)
       },
       fail: err => {
-        icon: 'none',
-          console.error('[数据库] [更新记录] 失败：', err)
+        console.error('[云函数] [login] 调用失败', err)
       }
     })
+
+    // db.collection('teamInfo').doc(teamId).update({
+    //   data: {
+    //     member_id_list: member_id_list,
+    //     joined_number: team.joined_number+1
+    //   },
+    //   success: res => {
+    //     console.log(res)
+    //     this.onLoad()
+    //   },
+    //   fail: err => {
+    //     icon: 'none',
+    //       console.error('[数据库] [更新记录] 失败：', err)
+    //   }
+    // })
     
   },
 
