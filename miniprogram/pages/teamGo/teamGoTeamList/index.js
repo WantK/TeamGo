@@ -14,7 +14,7 @@ Page({
    */
   onLoad: function (options) {
     console.log("app.globalData.openid:", app.globalData.openid)
-    console.log(app.onQuery(app.globalData.openid))
+    app.onQuery(app.globalData.openid)
     console.log(app.globalData)
   },
 

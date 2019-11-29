@@ -15,8 +15,6 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </view>
   </view>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
   <!-- 上传图片 -->
@@ -58,9 +56,4 @@
     </navigator>
   </view> -->
 
-
-=======
->>>>>>> master
-=======
->>>>>>> master
 </view>

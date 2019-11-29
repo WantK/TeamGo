@@ -1,6 +1,6 @@
 <!--miniprogram/pages/teamGo/teamGoIndex/index.wxml-->
 <import src="../tab-bar-vant/tab-bar.wxml"/>
-<!-- <template is="tab-bar-vant"></template> -->
+<template is="tab-bar-vant"></template>
 
 <view>
   <van-cell-group>
@@ -86,7 +86,7 @@
   </van-cell>
 
 </view> -->
-<view>
+<!-- <view>
   <button bindtap="onQuery">查询</button>
   <text wx:if="{{queryResult}}">{{queryResult}}</text>
 </view>
@@ -97,4 +97,4 @@
 <view>
   <button bindtap="onRemove">删除</button>
   <input type="text" bindinput="onIdRemove" value="{{removeInput}}"></input>
-</view>
+</view> -->
