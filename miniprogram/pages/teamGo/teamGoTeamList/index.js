@@ -23,6 +23,7 @@ Page({
    */
   onLoad: function (options) {
     // console.log("app.globalData.openid:", app.globalData)
+    util.onGetOpenid()
     app.onQuery(app.globalData.openid)
     app.onQueryTeamList()
     app.onQueryUserList()
